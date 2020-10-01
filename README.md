@@ -2,6 +2,6 @@
 
 Run
 
-```
-curl https://raw.githubusercontent.com/nitpum/setup/main/main.sh | bash
+```bash
+curl -s https://raw.githubusercontent.com/nitpum/setup/main/main.sh | bash
 ```
