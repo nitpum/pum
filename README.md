@@ -1,7 +1,7 @@
-# Setup script
+# Prompt united macro
 
 Run
 
 ```bash
-curl -s https://raw.githubusercontent.com/nitpum/setup/main/main.sh | bash
+curl -s https://raw.githubusercontent.com/nitpum/pum/main/install.sh | bash
 ```
