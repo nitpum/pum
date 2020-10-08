@@ -8,6 +8,8 @@ NO_COLOR='\033[0m'
 CLEAR_LINE='\r\033[K\r'
 CLEAR_SCREEN='\033c'
 
+PUM_DIR=~/pum
+
 # Check is project exists
 if [ -d ~/pum ]; then 
   cd ~/pum
@@ -57,4 +59,12 @@ else
   echo "📢 Setup alias"
 
   echo "alias pum=pum.bash" >> ~/.profile
+fi
+
+if grep -E 'source $PUM_DIR/profile.sh' .profile > /dev/null; then
+  echo "${GREEN}✔ Profile already setup${NO_COLOR}"
+else
+  echo "📢 Setup profile"
+
+  echo "source $PUM_DIR/profile.sh" >> ~/.profile
 fi
