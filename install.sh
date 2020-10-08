@@ -56,5 +56,5 @@ if grep -E 'alias pum=pum\.bash' .profile > /dev/null; then
 else
   echo "📢 Setup alias"
 
-  echo -e "alias pum=pum.bash" >> ~/.profile
+  echo "alias pum=pum.bash" >> ~/.profile
 fi
