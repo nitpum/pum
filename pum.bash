@@ -9,4 +9,4 @@
 #
 # ===================
 
-source ~/pum/main.sh
+source ~/pum/main
