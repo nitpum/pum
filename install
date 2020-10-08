@@ -34,13 +34,13 @@ else
 fi
 
 # Create symlink to bin
-if [ -L ~/bin/pum.bash ]; then
+if [ -L ~/bin/pum ]; then
   echo "${GREEN}✔ Launch already setup${NO_COLOR}"
 else
   echo "🚀 Setup launch file..."
   mkdir -p ~/bin
-  ln -s ~/pum/pum.bash ~/bin/pum.bash
-  chmod +x ~/pum/pum.bash
+  ln -s ~/pum/pum ~/bin/pum
+  chmod +x ~/pum/pum
 fi
 
 cd ~/
@@ -50,21 +50,21 @@ if grep "PATH=~/bin:\$PATH" .profile > /dev/null; then
 else 
   echo "🚄 Setup PATH"
 
-  echo -e "\nexport PATH=~/bin:\$PATH" >> ~/.profile
+  echo "\nexport PATH=~/bin:\$PATH" >> ~/.profile
 fi
 
-if grep -E 'alias pum=pum\.bash' .profile > /dev/null; then
+if grep -E 'alias pum=pum' .profile > /dev/null; then
   echo "${GREEN}✔ Alias already setup${NO_COLOR}"
 else
   echo "📢 Setup alias"
 
-  echo "alias pum=pum.bash" >> ~/.profile
+  echo "alias pum=pum" >> ~/.profile
 fi
 
-if grep -E 'source $PUM_DIR/profile.sh' .profile > /dev/null; then
+if grep -E 'source $PUM_DIR/profile' .profile > /dev/null; then
   echo "${GREEN}✔ Profile already setup${NO_COLOR}"
 else
-  echo "📢 Setup profile"
+  echo "😀 Setup profile"
 
-  echo "source $PUM_DIR/profile.sh" >> ~/.profile
+  echo "source $PUM_DIR/profile" >> ~/.profile
 fi
