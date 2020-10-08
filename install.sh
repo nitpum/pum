@@ -33,7 +33,7 @@ else
 fi
 
 # Create shortcut
-if [ -f ~/pum/pum.sh ]; then
+if [ -f ~/bin/pum.sh ]; then
   echo "✔ Path already setup"
 else
   echo "🔥 Setup path..."
