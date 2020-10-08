@@ -9,7 +9,7 @@ CLEAR_LINE='\r\033[K\r'
 CLEAR_SCREEN='\033c'
 
 # Check is project exists
-if [ -d "~/pum" ]; then
+if [ -d ~/pum ]; then
   echo "${YELLOW}Found ~/pum directory"
   
   cd ~/pum
