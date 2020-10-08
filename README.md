@@ -3,5 +3,5 @@
 Run
 
 ```bash
-curl -s https://raw.githubusercontent.com/nitpum/pum/main/install.sh | bash
+curl -s https://raw.githubusercontent.com/nitpum/pum/main/install.sh | sh
 ```
