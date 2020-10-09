@@ -1,5 +1,17 @@
 #!/bin/bash
 
-if [[ $1 == "ssh" ]]; then
-  source $PUM_DIR/ssh ${@:2}
-fi
+
+case $1 in
+  ssh)
+    source $PUM_DIR/ssh ${@:2}    
+    ;;
+  edit)
+    code $PUM_DIR
+    ;;
+  pull)
+    git -C $PUM_DIR pull
+    ;;
+  *)
+    echo "Please enter command"
+    ;;
+esac
