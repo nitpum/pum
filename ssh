@@ -6,6 +6,5 @@ if [[ $1 ]]; then
     ssh-add ~/.ssh/$1
   else
     echo "$1 is not found"
-    exit;
   fi
 fi
