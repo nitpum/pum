@@ -47,26 +47,18 @@ fi
 
 cd ~/
 
-if grep "PATH=~/bin:\$PATH" .profile > /dev/null; then
-  echo "${GREEN}✔ PATH already setup${NO_COLOR}"
-else 
-  echo "🚄 Setup PATH"
-
-  echo "\nexport PATH=~/bin:\$PATH" >> ~/.profile
-fi
-
-if grep -E 'alias pum=pum' .profile > /dev/null; then
-  echo "${GREEN}✔ Alias already setup${NO_COLOR}"
-else
-  echo "📢 Setup alias"
-
-  echo "alias pum=pum" >> ~/.profile
-fi
-
 if grep -E "source $PUM_DIR/profile" .profile > /dev/null; then
   echo "${GREEN}✔ Profile already setup${NO_COLOR}"
 else
   echo "😀 Setup profile"
 
   echo "\nsource $PUM_DIR/profile" >> ~/.profile
+fi
+
+if grep -E "source $PUM_DIR/profile" .bashrc > /dev/null; then
+  echo "${GREEN}✔ Bash profile already setup${NO_COLOR}"
+else
+  echo "📜 Setup bash profile"
+
+  echo "\nsource $PUM_DIR/profile" >> ~/.bashrc
 fi
