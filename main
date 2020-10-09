@@ -1,3 +1,5 @@
 #!/bin/bash
 
-source $PUM_DIR/ssh.bash
+if [[ $1 == "ssh" ]]; then
+  source $PUM_DIR/ssh ${@:2}
+fi
