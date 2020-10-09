@@ -2,7 +2,10 @@
 
 if [[ $1 ]]; then
   if [[ -f ~/.ssh/$1 ]]; then
-    eval `ssh-agent -s` > /dev/null
+    if ! ps -p $SSH_AGENT_PID &> /dev/null; then
+      echo "Starting new agent..."
+      eval `ssh-agent -s`
+    fi
     ssh-add ~/.ssh/$1
   else
     echo "$1 is not found"
