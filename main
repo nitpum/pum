@@ -14,9 +14,6 @@ case $1 in
   pull)
     git -C $PUM_DIR pull
     ;;
-  reload)
-    source $PUM_DIR/main
-    ;;
   *)
     echo "Please enter command"
     ;;
