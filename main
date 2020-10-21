@@ -5,11 +5,17 @@ case $1 in
   ssh)
     source $PUM_DIR/ssh ${@:2}    
     ;;
+  git)
+    source $PUM_DIR/git ${@:2}
+    ;;
   edit)
     code $PUM_DIR
     ;;
   pull)
     git -C $PUM_DIR pull
+    ;;
+  reload)
+    source $PUM_DIR/main
     ;;
   *)
     echo "Please enter command"

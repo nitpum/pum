@@ -1,0 +1,43 @@
+#!/bin/bash
+
+profile() {
+  case $1 in
+    lmwn)
+      set -x; # Enable print command
+      git config user.name "Nitipoom Unrrom"
+      git config user.email "nitipoom.u@lmwn.com"
+      set +x; # Dinable print command
+    ;;
+    *)
+      echo "No git profile ($1)"
+    ;;
+  esac 
+}
+
+init() {
+  case $1 in
+    lmwn)
+      git init
+      profile lmwn
+    ;;
+    *)
+      git init
+    ;;
+  esac
+}
+
+
+if [[ $1 ]]; then
+  
+  case $1 in
+    profile) 
+      profile ${@:2}
+    ;;
+    init)
+      init ${@:2}
+    ;;
+    *)
+      echo "Please enter argument"
+    ;;
+  esac
+fi
