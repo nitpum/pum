@@ -24,6 +24,7 @@ init() {
       git init
     ;;
   esac
+  echo "* text=auto eol=lf" >> .gitattributes
 }
 
 
