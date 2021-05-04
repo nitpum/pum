@@ -62,3 +62,15 @@ else
 
   echo "\nsource $PUM_DIR/profile" >> ~/.bashrc
 fi
+
+# Install starship
+# echo "🚀 Install starship"
+# sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+
+# # Install golang
+# echo "🤖 Install go"
+# apt install golang-go
+
+# # Install powerline
+# echo "Install powerline"
+# go get -u github.com/justjanne/powerline-go

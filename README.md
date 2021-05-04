@@ -1,6 +1,6 @@
 # Prompt united macro
 
-Run
+## Install
 
 ```bash
 curl -s https://raw.githubusercontent.com/nitpum/pum/main/install | sh
